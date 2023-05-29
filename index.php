@@ -74,4 +74,20 @@ if($is_loged_in) {
 $message = $is_loged_in ? 'Welcome back!' : 'Hello There';
 
 echo $message;
+
+// switch statements
+$total = 10;
+switch ($total) {
+    case 3:
+        echo '<p>Total is 3</p>';
+        break;
+    case 6:
+        echo '<p>Total is 6</p>';
+        break;
+    case 9:
+        echo '<p>Total is 9</p>';
+        break;
+    default:
+        echo '<p>none of the above</p>';
+}
 ?>
