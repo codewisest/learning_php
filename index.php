@@ -49,4 +49,17 @@ $fruit = 'Bananas';
 echo "<h1> Hello $name </h1>";
 echo "<p>We will be going to $city with $friend to see $movie. We will be going with a bunch of $fruit</p>";
 
+if(10 < 1) {
+    echo "<p>We stopped at the first if</p>";
+} else if(10 < 4) {
+    echo "<p> We stopped at the first else if</p>";
+} else if(10 < 11) {
+    echo "<p> We stopped at the second else if</p>";
+} else if(10 < 20 ) {
+    echo "<p>We stopped at the last esle if</p>";
+} else {
+    echo "<p>We stop here</p>";
+}
+
+echo "<p>I will always be run</p>";
 ?>
