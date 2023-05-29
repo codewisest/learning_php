@@ -76,7 +76,7 @@ $message = $is_loged_in ? 'Welcome back!' : 'Hello There';
 echo $message;
 
 // switch statements
-$total = 10;
+$total = 6;
 switch ($total) {
     case 3:
         echo '<p>Total is 3</p>';
@@ -90,4 +90,22 @@ switch ($total) {
     default:
         echo '<p>none of the above</p>';
 }
+
+$turtle = 'Raph';
+$bandana = '';
+switch($turtle) {
+    case 'Leo':
+        $bandana = 'blue';
+        break;
+    case 'Raph':
+        $bandana = 'red';
+        break;
+    case 'Mike':
+        $bandana = 'Orange';
+        break;
+    default:
+        echo '<p>No bandana colour</p>';
+}
+
+echo "<p>$bandana</p>"
 ?>
