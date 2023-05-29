@@ -62,4 +62,16 @@ if(10 < 1) {
 }
 
 echo "<p>I will always be run</p>";
+
+$is_loged_in = true;
+
+if($is_loged_in) {
+    echo '<h3>Welcome back, User!</h3>';
+} else {
+    echo '<h3>Welcome to the site</h3>';
+}
+
+$message = $is_loged_in ? 'Welcome back!' : 'Hello There';
+
+echo $message;
 ?>
