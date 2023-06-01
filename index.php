@@ -116,5 +116,16 @@ $result = match($x) {
     default => "$x is neither 1 nor 2",
 };
 echo $result;
+
+$result = array();
+$result[] = (14 + 82 - (32 / 2)) ** 2;
+$result[] = 18 * ((3 / 6) - 9) * 10;
+$result[] = 5 * ((12 / 2) - (8 * 4) + (12 * 6));
+print_r($result);
+
+// echo $result
+
+
 phpinfo();
+
 ?>
