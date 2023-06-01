@@ -123,9 +123,12 @@ $result[] = 18 * ((3 / 6) - 9) * 10;
 $result[] = 5 * ((12 / 2) - (8 * 4) + (12 * 6));
 print_r($result);
 
-// echo $result
+echo (15 % 12) ** 2;
 
+$u = 2;
+echo ++$u + --$u;
 
+echo 3**2+5*2;
 phpinfo();
 
 ?>
