@@ -129,6 +129,12 @@ $u = 2;
 echo ++$u + --$u;
 
 echo 3**2+5*2;
+
+for($i = 0; $i < sizeof($colors); $i++) {
+    echo "<br/>";
+    echo $colors[$i];
+
+}
 phpinfo();
 
 ?>
