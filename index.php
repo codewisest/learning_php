@@ -135,6 +135,24 @@ for($i = 0; $i < sizeof($colors); $i++) {
     echo $colors[$i];
 
 }
+
+foreach($colors as $color) {
+    echo "<br/>";
+    echo $color;
+}
+
+$fibo_sum = 0;
+$sequence = array(1, 1);
+$i = 1;
+// while($fibo_sum < 200){
+//     echo $sequence[i];
+
+//         $fibo_sum = $sequence[$i] + $sequence[$i - 1];
+//         $sequence[] = $fibo_sum;
+//         $i++;
+//     }
+     
+
 phpinfo();
 
 ?>
