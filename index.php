@@ -160,6 +160,16 @@ echo "<br /> ***************** Hello Wisest Ninja ****************";
 // Indexed arrays
 $peopleOne = ['shaun', 'crystal', 'ryu'];
 
+// for loop
+echo '<br />';
+for($i = 0; $i < count($peopleOne); $i++) {
+    echo "$peopleOne[$i] <br />";
+}
+
+
+foreach($peopleOne as $person) {
+    echo "$person <br / >";
+}
 echo $peopleOne[1];
 
 $peopleTwo = array('Ken', 'chun-li', 'Jax');
@@ -207,6 +217,19 @@ $blogs = [
     ['title' => 'zelda hidden chests', 'author' => 'link', 'content' => 'lorem', 'likes' => 50]
 ];
 
+foreach($blogs as $blog) {
+    // echo "$blog['author'] - $blog['title'] <br />";
+    echo '###############';
+    echo $blog['author'] . '-' . $blog['title'] . '<br/>';
+}
+
+$i = 0;
+while($i < count($blogs)) {
+    echo '<br />';
+    echo $blogs[$i]['title'];
+    $i++;
+}
+
 echo '******************************************************';
 print_r($blogs);
 echo '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&';
@@ -230,6 +253,14 @@ print_r($popped);
     <h1><?php echo 'Hello Wisest'; ?></h1>
     <p><?php echo "Hello $name"; ?></p>
     <p><?php echo "I am $age years old"; ?></p>
-    <p><?php echo STATE ?></p>
+    <p><?php echo "STATE";?></p>
+    <h1>Blogs</h1>
+    <ul>
+        <?php foreach($blogs as $blog){ ?>
+            <h2><?php echo $blog['title'] ;?></h2>
+            <h3><?php echo $blog['author'] ;?></h3>
+        <?php } ?>
+
+    </ul>
 </body>
 </html>
