@@ -156,7 +156,29 @@ $i = 1;
 // ***************** THE NET NINJA *************************
 echo "<br /> ***************** Hello Wisest Ninja ****************";
 // phpinfo();
+$name = 'Chijioke';
+$age = 30;
+define('STATE', 'Abia');
 
+$stringOne = 'My email is';
+$stringTwo = 'wisestcodes@gmail.com';
+
+echo $stringOne . $stringTwo;
+
+echo "$stringOne $stringTwo";
+
+echo "The ninjas screamed \"whaa\"";
+echo 'The ninjas screamed "whaa"';
+
+echo $stringOne[1];
+
+echo strlen($stringOne);
+
+echo strtoupper($stringOne);
+
+echo strtolower($stringTwo);
+
+echo str_replace(' ', '|', $stringOne);
 ?>
 
 <!DOCTYPE html>
@@ -167,6 +189,9 @@ echo "<br /> ***************** Hello Wisest Ninja ****************";
     <title>My first PHP file</title>
 </head>
 <body>
-    <h1><?php echo 'Hello Wisest' ?></h1>
+    <h1><?php echo 'Hello Wisest'; ?></h1>
+    <p><?php echo "Hello $name"; ?></p>
+    <p><?php echo "I am $age years old"; ?></p>
+    <p><?php echo STATE ?></p>
 </body>
 </html>
