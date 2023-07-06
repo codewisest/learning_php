@@ -156,49 +156,32 @@ $i = 1;
 // ***************** THE NET NINJA *************************
 echo "<br /> ***************** Hello Wisest Ninja ****************";
 // phpinfo();
-$name = 'Chijioke';
-$age = 30;
-define('STATE', 'Abia');
 
-$stringOne = 'My email is';
-$stringTwo = 'wisestcodes@gmail.com';
+// Indexed arrays
+$peopleOne = ['shaun', 'crystal', 'ryu'];
 
-echo $stringOne . $stringTwo;
+echo $peopleOne[1];
 
-echo "$stringOne $stringTwo";
+$peopleTwo = array('Ken', 'chun-li', 'Jax');
+echo $peopleTwo[1];
 
-echo "The ninjas screamed \"whaa\"";
-echo 'The ninjas screamed "whaa"';
+$ages = [20, 30, 40, 50];
+print_r($ages);
 
-echo $stringOne[1];
+$ages[1] = 25;
+print_r($ages);
 
-echo strlen($stringOne);
+$ages[] = 60;
+print_r($ages);
 
-echo strtoupper($stringOne);
+array_push($ages, 70);
+print_r($ages);
 
-echo strtolower($stringTwo);
+echo count($ages);
 
-echo str_replace(' ', '|', $stringOne);
+$peopleThree = array_merge($peopleOne, $peopleTwo);
 
-$radius = 25;
-$pi = 3.14;
-
-echo $pi * $radius ** 2;
-
-echo 2 * (9 + 6) / 3;
-
-$radius++;
-
-echo $radius;
-
-$radius--;
-
-echo $radius;
-
-echo floor($pi);
-echo ceil($pi);
-
-echo pi();
+print_r($peopleThree);
 ?>
 
 <!DOCTYPE html>
