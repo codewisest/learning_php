@@ -179,6 +179,26 @@ echo strtoupper($stringOne);
 echo strtolower($stringTwo);
 
 echo str_replace(' ', '|', $stringOne);
+
+$radius = 25;
+$pi = 3.14;
+
+echo $pi * $radius ** 2;
+
+echo 2 * (9 + 6) / 3;
+
+$radius++;
+
+echo $radius;
+
+$radius--;
+
+echo $radius;
+
+echo floor($pi);
+echo ceil($pi);
+
+echo pi();
 ?>
 
 <!DOCTYPE html>
