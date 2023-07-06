@@ -240,6 +240,24 @@ print_r($blogs);
 
 $popped = array_pop($blogs);
 print_r($popped);
+
+// @@@@@@@@@@@@@@@@@@@@@@@ CONDITIONALS @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+$price = 20;
+
+if($price < 20) {
+    echo 'If condition met';
+} else if($price < 30) {
+    echo 'Else if condition met';
+} else {
+    echo 'No condition met';
+}
+
+foreach($blogs as $blog) {
+    if($blog['likes'] > 40) {
+        echo '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!';
+        echo $blog['title'];
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -254,13 +272,21 @@ print_r($popped);
     <p><?php echo "Hello $name"; ?></p>
     <p><?php echo "I am $age years old"; ?></p>
     <p><?php echo "STATE";?></p>
-    <h1>Blogs</h1>
+    <h2>Blogs</h1>
     <ul>
         <?php foreach($blogs as $blog){ ?>
-            <h2><?php echo $blog['title'] ;?></h2>
-            <h3><?php echo $blog['author'] ;?></h3>
+            <h3><?php echo $blog['title'] ;?></h3>
+            <h4><?php echo $blog['author'] ;?></h4>
         <?php } ?>
 
+    </ul>
+
+    <ul>
+        <?php foreach($blogs as $blog) { ?>
+            <?php if($blog['likes'] > 40){ ?>
+                <li><?php echo $blog['title'] ?></li>
+            <?php } ?>
+        <?php } ?>
     </ul>
 </body>
 </html>
