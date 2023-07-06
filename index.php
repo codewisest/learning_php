@@ -199,6 +199,24 @@ echo count($ninjasOne);
 $ninjasThree = array_merge($ninjasOne, $ninjasTwo);
 
 print_r($ninjasThree);
+
+// multi-dimensional arrays
+$blogs = [
+    ['title' => 'mario party', 'author' => 'mario', 'content' => 'lorem', 'likes' => 30],
+    ['title' => 'mario kart cheats', 'author' => 'toad', 'content' => 'lorem', 'likes' => 25],
+    ['title' => 'zelda hidden chests', 'author' => 'link', 'content' => 'lorem', 'likes' => 50]
+];
+
+echo '******************************************************';
+print_r($blogs);
+echo '&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&';
+echo $blogs[1]['title'];
+
+$blogs[] = ['title' => 'castle party', 'author' => 'peach', 'content' => 'lorem', 'likes' => 100];
+print_r($blogs);
+
+$popped = array_pop($blogs);
+print_r($popped);
 ?>
 
 <!DOCTYPE html>
