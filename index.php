@@ -267,6 +267,12 @@ function sayHello($name = 'Wisest', $time = 'morning'){
 
 sayHello('Chiji', 'afternoon');
 
+$name = 'Gloria';
+function sayHi() {
+    echo "Hello $name";
+}
+
+sayHi();
 function formatProduct($product) {
     // echo "{$product['name']} costs ₦{$product['price']}";
     return "<br /> {$product['name']} costs ₦{$product['price']}";
