@@ -182,6 +182,23 @@ echo count($ages);
 $peopleThree = array_merge($peopleOne, $peopleTwo);
 
 print_r($peopleThree);
+
+// Associative array
+$ninjasOne = ['shaun' => 'black', 'mario' => 'orange', 'luigi' => 'brown'];
+print_r($ninjasOne);
+
+$ninjasTwo = array('bowser' => 'green', 'peach' => 'yellow');
+
+print_r($ninjasTwo);
+
+$ninjasTwo['toad'] = 'pink';
+print_r($ninjasTwo);
+
+echo count($ninjasOne);
+
+$ninjasThree = array_merge($ninjasOne, $ninjasTwo);
+
+print_r($ninjasThree);
 ?>
 
 <!DOCTYPE html>
