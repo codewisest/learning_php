@@ -258,6 +258,22 @@ foreach($blogs as $blog) {
         echo $blog['title'];
     }
 }
+
+// ***************** FUNCTIONS *********************************************
+echo '<br />********************* FUNCTIONS ***********************************<br />';
+function sayHello($name = 'Wisest', $time = 'morning'){
+    echo "Good $time $name";
+}
+
+sayHello('Chiji', 'afternoon');
+
+function formatProduct($product) {
+    // echo "{$product['name']} costs ₦{$product['price']}";
+    return "<br /> {$product['name']} costs ₦{$product['price']}";
+}
+
+$formatted = formatProduct(['name' => 'gold star', 'price' => 500]);
+echo $formatted;
 ?>
 
 <!DOCTYPE html>
