@@ -1,25 +1,7 @@
 <?php
-$user = 'wisestme';
-$password = 'dummy1234';
-$db = 'pizza_domain';
-$host = 'localhost';
-$port = 8889;
+    include('config/db_connect.php');
 
-$link = mysqli_init();
-$success = mysqli_real_connect(
-   $link,
-   $host,
-   $user,
-   $password,
-   $db,
-   $port
-);
-
-// check connection
-if(!$success) {
-    echo 'Connection error: ' . mysqli_connect_error();
-}
-$title = $email = $ingredients = '';
+    $title = $email = $ingredients = '';
     $errors = array('email' => '', 'title' => '', 'ingredients' => '');
     if(isset($_POST['submit'])){
         // echo htmlspecialchars($_POST['email']);
@@ -59,8 +41,22 @@ $title = $email = $ingredients = '';
         if(array_filter($errors)) {
             // echo 'There are errors in the form';
         } else {
-            // echo 'form is valid';
+            $email = mysqli_real_escape_string($link, $_POST['email']);
+            $title = mysqli_real_escape_string($link, $_POST['title']);
+            $ingredients = mysqli_real_escape_string($link, $_POST['ingredients']);
+
+            // create sql
+            $sql = "INSERT INTO pizzas(title,email,ingredients) VALUES('$title', '$email', '$ingredients')";
+
+            // Save to DB and check
+            if(mysqli_query($link, $sql)) {
+                // success
             header('Location: index.php');
+
+            } else {
+                echo 'Query error: ' . mysqli_error($link);
+            }
+            
         }
     }
 ?>

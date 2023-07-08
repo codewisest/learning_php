@@ -8,7 +8,7 @@
 <body>
     <nav>
         <div class="container">
-            <a href="#">Pizza Domain</a>
+            <a href="index.php">Pizza Domain</a>
             <ul>
                 <li><a href="add.php">Add a Pizza</a></li>
             </ul>
