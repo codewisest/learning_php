@@ -10,7 +10,7 @@
         <div class="container">
             <a href="#">Pizza Domain</a>
             <ul>
-                <li>Add a Pizza</li>
+                <li><a href="add.php">Add a Pizza</a></li>
             </ul>
         </div>
     </nav>
