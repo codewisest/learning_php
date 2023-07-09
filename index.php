@@ -28,7 +28,7 @@
                         </ul>
                     </div>
                     <div>
-                        <a href="#">More info</a>
+                        <a href="details.php?id=<?php echo $row['id']; ?>">More info</a>
                     </div>
                 </div>
             </div>
