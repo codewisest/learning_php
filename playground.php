@@ -297,6 +297,15 @@ if(isset($_POST['submit'])){
     header('Location: index.php');
 }
 
+$my_file = 'love.txt';
+
+if(file_exists($my_file)) {
+    echo readfile($my_file);
+} else {
+    echo 'File does not exist';
+}
+
+echo $quotes;
 ?>
 
 <!DOCTYPE html>
