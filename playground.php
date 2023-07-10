@@ -300,12 +300,47 @@ if(isset($_POST['submit'])){
 $my_file = 'love.txt';
 
 if(file_exists($my_file)) {
-    echo readfile($my_file);
+    // read file
+    echo readfile($my_file) . "<br />";
+
+    // copy file
+    copy($my_file, 'quotes.txt');
+
+    // absolute path
+    echo realpath($my_file);
+
+    // file size
+    echo filesize($my_file);
+
+    // rename
+    rename('quotes.txt', 'my_love.txt');
 } else {
     echo 'File does not exist';
 }
 
-echo $quotes;
+mkdir('quotes');
+echo $quotes . " 322 <br />";
+
+// file system part 2
+$second_file = 'my_love.txt';
+
+// opening a file for reading
+$handle = fopen($second_file, 'a+');
+
+// read the file
+// echo fread($handle,filesize($second_file)) . "331 <br /> ";
+
+// read single line
+// echo "yes" . fgets($handle);
+
+// read single character
+// echo fgetc($handle);
+echo "Write";
+// writing to a file
+fwrite($handle, "\n John 3:16");
+
+fclose($handle);
+unlink($second_file);
 ?>
 
 <!DOCTYPE html>
