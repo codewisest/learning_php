@@ -344,8 +344,8 @@ unlink($second_file);
 
 // classes
 class User {
-    public $name;
-    public $email;
+    private $name;
+    private $email;
 
     public function __construct($name, $email) {
         $this -> email = $email;
@@ -356,13 +356,27 @@ class User {
         // echo 'the user logged in';
         echo $this -> name . ' Logged in';
     }
+
+    public function getName() {
+        return $this -> name;
+    }
+
+    public function setName($name) {
+        if(is_string($name) && strlen($name) > 1) {
+            $this -> name = $name;
+            return "The name has been updated to $name";
+        } else {
+            return 'Not a valid name';
+        }
+    }
 }
 
 // instantiate class
 $userOne = new User('Chijioke', 'wisest@wisestmedia.tech');
 
 $userOne -> login();
-echo $userOne -> name;
+echo $userOne -> getName();
+echo $userOne -> setName('Nathan');
 ?>
 
 <!DOCTYPE html>
