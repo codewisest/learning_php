@@ -335,12 +335,34 @@ $handle = fopen($second_file, 'a+');
 
 // read single character
 // echo fgetc($handle);
-echo "Write";
+
 // writing to a file
 fwrite($handle, "\n John 3:16");
 
 fclose($handle);
 unlink($second_file);
+
+// classes
+class User {
+    public $name;
+    public $email;
+
+    public function __construct($name, $email) {
+        $this -> email = $email;
+        $this -> name = $name;
+    }
+
+    public function login() {
+        // echo 'the user logged in';
+        echo $this -> name . ' Logged in';
+    }
+}
+
+// instantiate class
+$userOne = new User('Chijioke', 'wisest@wisestmedia.tech');
+
+$userOne -> login();
+echo $userOne -> name;
 ?>
 
 <!DOCTYPE html>
